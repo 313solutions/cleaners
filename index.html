@@ -13,7 +13,7 @@
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .font-display { font-family: 'Poppins', sans-serif; }
         html { scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); }
         
         /* Input-uri custom */
         input, select, textarea { outline: none; transition: all 0.3s; }
@@ -52,34 +52,73 @@
         </div>
     </nav>
 
-    <header id="acasa" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <header id="acasa" class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+        
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1581578731117-10d52143b0d8?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover object-center">
-            <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent sm:via-white/50"></div>
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1920&auto=format&fit=crop" 
+                 class="w-full h-full object-cover object-center"
+                 alt="Living room clean">
+            <div class="absolute inset-0 bg-black/20"></div>
         </div>
         
-        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full py-12 md:py-0 flex items-center">
-            <div class="max-w-2xl">
-                <div class="relative overflow-hidden rounded-3xl p-8 md:p-10 shadow-2xl border border-white/50 group">
-                    <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-30 group-hover:scale-105 transition duration-700"></div>
-                    <div class="absolute inset-0 z-0 bg-white/60 backdrop-blur-sm"></div>
-
-                    <div class="relative z-10 text-gray-900">
-                        <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-6 border border-blue-100 shadow-sm">
-                            <i class="fa-solid fa-sparkles text-blue-500"></i>
-                            <span class="text-sm font-bold text-blue-800">Servicii Premium de Curățenie</span>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full h-full flex flex-col justify-center">
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                
+                <div class="relative overflow-hidden rounded-[2rem] p-8 md:p-12 shadow-2xl border border-white/80 group transform transition duration-500 hover:scale-[1.01]">
+                    <div class="absolute inset-0 z-0 bg-white/90 backdrop-blur-md"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 bg-blue-50 px-3 py-1 rounded-full mb-6 border border-blue-100">
+                            <i class="fa-solid fa-star text-blue-500 text-xs"></i>
+                            <span class="text-xs font-bold text-blue-800 uppercase tracking-wide">Servicii Premium</span>
                         </div>
-                        <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight drop-shadow-sm">Casă curată,<br> <span class="text-blue-600">minte relaxată</span>.</h1>
-                        <p class="text-lg md:text-xl text-gray-700 mb-0 leading-relaxed font-medium">
-                            Oferim servicii profesionale de curățenie pentru locuințe și birouri. Folosim echipamente moderne și soluții eco-friendly.
+                        
+                        <h1 class="text-4xl md:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight">
+                            Casă curată,<br> <span class="text-blue-600">minte relaxată</span>.
+                        </h1>
+                        
+                        <p class="text-lg text-gray-600 mb-8 font-medium leading-relaxed">
+                            Bucură-te de timpul tău liber. Noi ne ocupăm de curățenie folosind echipamente profesionale și soluții eco-friendly.
+                        </p>
+
+                        <a href="#servicii" class="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/40">
+                            <i class="fa-solid fa-list-check"></i> Vezi Prețuri
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-[2rem] p-8 md:p-12 shadow-2xl border border-blue-500/30 group mt-4 md:mt-0 transform transition duration-500 hover:scale-[1.01] md:w-4/5 md:ml-auto">
+                    <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 to-blue-900"></div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full mix-blend-overlay filter blur-xl opacity-20"></div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-purple-500 rounded-full mix-blend-overlay filter blur-xl opacity-20"></div>
+
+                    <div class="relative z-10 text-white">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl mb-6 backdrop-blur-sm border border-white/10">
+                            <i class="fa-solid fa-gift text-yellow-400"></i>
+                        </div>
+
+                        <h2 class="text-3xl font-display font-bold mb-4">Ofertă Nou Client</h2>
+                        
+                        <p class="text-blue-100 text-lg mb-6 leading-relaxed">
+                            Ești la prima colaborare cu noi? Ai o reducere specială pentru a testa serviciile noastre premium.
+                        </p>
+
+                        <div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl border border-white/10">
+                            <span class="text-4xl font-bold text-yellow-400">-10%</span>
+                            <div class="h-8 w-px bg-white/20"></div>
+                            <div>
+                                <p class="text-xs text-blue-200 uppercase font-bold">Cod Reducere</p>
+                                <p class="font-mono font-bold tracking-wider">ECO10</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-xs text-blue-300 mt-6 opacity-70">
+                            *Valabil pentru orice tip de serviciu comandat în luna curentă.
                         </p>
                     </div>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-4 mt-8 ml-4">
-                    <a href="#servicii" class="bg-blue-600 text-white border-2 border-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 hover:border-blue-700 transition flex items-center justify-center gap-2 shadow-xl hover:shadow-blue-500/40 hover:-translate-y-1">
-                        <i class="fa-solid fa-list-check"></i> Vezi Prețuri
-                    </a>
-                </div>
+
             </div>
         </div>
     </header>
@@ -184,7 +223,7 @@
                 <div class="md:col-span-1">
                     <h3 class="text-white font-bold text-lg mb-6">Contact</h3>
                     <ul class="space-y-4">
-                        <li class="flex gap-3 items-start"><i class="fa-solid fa-location-dot text-blue-500 mt-1"></i> <span class="text-sm">Bulevardul Unirii Nr. 10,<br>București</span></li>
+                        <li class="flex gap-3 items-start"><i class="fa-solid fa-location-dot text-blue-500 mt-1"></i> <span class="text-sm">București & Ilfov</span></li>
                         <li class="flex gap-3 items-center"><i class="fa-solid fa-phone text-blue-500"></i> <a href="tel:0723040207" class="text-sm hover:text-white transition">0723 040 207</a></li>
                         <li class="flex gap-3 items-center"><i class="fa-solid fa-envelope text-blue-500"></i> <span class="text-sm">contact@ecoclean.ro</span></li>
                     </ul>
