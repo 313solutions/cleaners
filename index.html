@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoClean - Servicii Profesionale de Curățenie</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-display { font-family: 'Poppins', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); }
+        
+        /* Input-uri custom */
+        input, select, textarea { outline: none; transition: all 0.3s; }
+        input:focus, select:focus, textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 antialiased">
+
+    <nav class="fixed w-full z-40 top-0 left-0 glass shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 hover:opacity-80 transition">
+                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-lg shadow-md">
+                    <i class="fa-solid fa-broom"></i>
+                </div>
+                <div class="leading-tight">
+                    <h1 class="text-xl font-display font-bold text-gray-900 tracking-tight">EcoClean</h1>
+                    <span class="text-[10px] text-blue-700 font-bold uppercase tracking-wider">Expert Curățenie</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="#acasa" class="hover:text-blue-600 transition">Acasă</a>
+                <a href="#servicii" class="hover:text-blue-600 transition">Servicii & Prețuri</a>
+                <a href="#despre" class="hover:text-blue-600 transition">Despre Noi</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+                <button onclick="toggleBookingModal()" class="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5 flex items-center gap-2 font-semibold">
+                    <i class="fa-regular fa-calendar-check"></i> <span>Cere Ofertă</span>
+                </button>
+            </div>
+            <button onclick="toggleMenu()" class="md:hidden text-2xl text-gray-700 p-2"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div id="mobileMenu" class="hidden absolute top-20 left-0 w-full bg-white border-t border-gray-100 shadow-xl flex flex-col p-6 gap-4 z-30">
+            <a href="#acasa" onclick="toggleMenu()" class="text-lg font-medium py-2 border-b border-gray-50">Acasă</a>
+            <a href="#servicii" onclick="toggleMenu()" class="text-lg font-medium py-2 border-b border-gray-50">Servicii</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-lg font-medium py-2">Contact</a>
+            <button onclick="toggleBookingModal(); toggleMenu()" class="bg-blue-600 text-white w-full py-4 rounded-xl font-bold mt-2 shadow-lg">Cere Ofertă</button>
+        </div>
+    </nav>
+
+    <header id="acasa" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581578731117-10d52143b0d8?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent sm:via-white/60"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full py-12 md:py-0">
+            <div class="max-w-2xl text-gray-900">
+                <div class="inline-flex items-center gap-2 bg-blue-50 backdrop-blur px-4 py-2 rounded-full mb-8 border border-blue-100 shadow-sm">
+                    <i class="fa-solid fa-sparkles text-blue-500"></i>
+                    <span class="text-sm font-bold text-blue-800">Servicii Premium de Curățenie</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">Casă curată,<br> <span class="text-blue-600">minte relaxată</span>.</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg font-medium">
+                    Oferim servicii profesionale de curățenie pentru locuințe și birouri. Folosim echipamente moderne și soluții eco-friendly.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#servicii" class="bg-blue-600 text-white border-2 border-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 hover:border-blue-700 transition flex items-center justify-center gap-2 shadow-xl">
+                        <i class="fa-solid fa-list-check"></i> Vezi Prețuri
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicii" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">Ce oferim</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mt-2 mb-4">Serviciile Noastre</h2>
+                <p class="text-gray-500">Alege categoria dorită pentru a vedea lista de prețuri estimative.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openMenuModal('rezidential')">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Rezidențial</h3>
+                    <p class="text-gray-500 text-sm mb-6">Curățenie generală sau de întreținere pentru apartamente și case.</p>
+                    <div class="text-blue-700 font-bold text-sm uppercase group-hover:translate-x-2 transition-transform inline-flex items-center">Vezi Tarife <i class="fa-solid fa-arrow-right ml-2"></i></div>
+                </div>
+                <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openMenuModal('comercial')">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Birouri / Comercial</h3>
+                    <p class="text-gray-500 text-sm mb-6">Spații comerciale, birouri, scări de bloc și abonamente.</p>
+                    <div class="text-blue-700 font-bold text-sm uppercase group-hover:translate-x-2 transition-transform inline-flex items-center">Vezi Tarife <i class="fa-solid fa-arrow-right ml-2"></i></div>
+                </div>
+                <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openMenuModal('constructor')">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">După Constructor</h3>
+                    <p class="text-gray-500 text-sm mb-6">Curățare intensivă după renovare sau construcție.</p>
+                    <div class="text-blue-700 font-bold text-sm uppercase group-hover:translate-x-2 transition-transform inline-flex items-center">Vezi Tarife <i class="fa-solid fa-arrow-right ml-2"></i></div>
+                </div>
+                <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openMenuModal('tapiterie')">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Canapele & Covoare</h3>
+                    <p class="text-gray-500 text-sm mb-6">Curățare injecție-extracție pentru tapițerii textile.</p>
+                    <div class="text-blue-700 font-bold text-sm uppercase group-hover:translate-x-2 transition-transform inline-flex items-center">Vezi Tarife <i class="fa-solid fa-arrow-right ml-2"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="despre" class="py-24 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=800&auto=format&fit=crop" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+                <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl hidden md:block">
+                    <p class="text-3xl font-bold text-blue-600">100%</p>
+                    <p class="text-sm text-gray-500 font-bold uppercase">Satisfacție</p>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">Cine suntem</span>
+                <h2 class="text-4xl font-display font-bold text-gray-900 mt-2 mb-6">Profesionalism și discreție</h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    Suntem o echipă dedicată care înțelege importanța unui mediu curat. Fie că este vorba de casa ta sau de biroul unde lucrezi, tratăm fiecare spațiu cu maximă responsabilitate.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-check-circle text-blue-600 text-xl"></i>
+                        <span class="text-gray-700 font-medium">Personal verificat și instruit</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-check-circle text-blue-600 text-xl"></i>
+                        <span class="text-gray-700 font-medium">Echipamente profesionale Kärcher</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-check-circle text-blue-600 text-xl"></i>
+                        <span class="text-gray-700 font-medium">Soluții sigure pentru animale și copii</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-gray-400 pt-20 pb-10 border-t-4 border-blue-600">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 border-b border-gray-800 pb-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <h2 class="text-2xl font-bold text-white font-display mb-6">EcoClean</h2>
+                    <p class="text-sm mb-8 leading-relaxed">Partenerul tău de încredere pentru o curățenie exemplară.</p>
+                    
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-[#1877F2] text-white rounded-lg flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-[#E4405F] text-white rounded-lg flex items-center justify-center transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-black text-white rounded-lg flex items-center justify-center transition border border-gray-700">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <h3 class="text-white font-bold text-lg mb-6">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 items-start"><i class="fa-solid fa-location-dot text-blue-500 mt-1"></i> <span class="text-sm">București & Ilfov</span></li>
+                        <li class="flex gap-3 items-center"><i class="fa-solid fa-phone text-blue-500"></i> <a href="tel:0723040207" class="text-sm hover:text-white transition">0723 040 207</a></li>
+                        <li class="flex gap-3 items-center"><i class="fa-solid fa-envelope text-blue-500"></i> <span class="text-sm">contact@ecoclean.ro</span></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="text-white font-bold text-lg mb-6">Program</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-800 rounded-lg p-4 text-center border border-gray-700"><span class="block text-gray-500 text-xs uppercase mb-1">Luni - Vineri</span><span class="block text-white font-bold text-lg">08:00 - 20:00</span></div>
+                        <div class="bg-gray-800 rounded-lg p-4 text-center border border-gray-700"><span class="block text-gray-500 text-xs uppercase mb-1">Sâmbătă</span><span class="block text-white font-bold text-lg">09:00 - 15:00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-sm text-gray-600"><p>&copy; 2024 EcoClean Expert.</p></div>
+        </div>
+    </footer>
+
+    <div id="bookingModal" class="hidden fixed inset-0 z-[60]" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity" onclick="toggleBookingModal()"></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-4xl flex flex-col md:flex-row">
+                    <button onclick="toggleBookingModal()" class="absolute top-4 right-4 z-50 bg-gray-100 hover:bg-gray-200 text-gray-600 p-2 rounded-full transition duration-200"><i class="fa-solid fa-xmark text-xl"></i></button>
+
+                    <div class="bg-blue-600 text-white w-full md:w-[300px] flex-shrink-0 p-8 flex flex-col justify-between relative">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-display font-bold mb-2">Cere Ofertă</h3>
+                            <p class="text-blue-100 text-sm mb-6">Completează detaliile și te contactăm rapid pe WhatsApp cu prețul estimativ.</p>
+                            <div class="space-y-4">
+                                <a href="tel:0723040207" class="flex items-center gap-4 bg-white/10 hover:bg-white/20 p-4 rounded-xl transition border border-white/10">
+                                    <div class="w-8 h-8 rounded-full bg-white text-blue-600 flex items-center justify-center"><i class="fa-solid fa-phone"></i></div>
+                                    <div><p class="text-xs text-blue-200 uppercase font-bold">Sună-ne</p><p class="font-bold">0723 040 207</p></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 bg-white p-8">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-gray-900 font-display">Detalii Curățenie</h3>
+                            <p class="text-sm text-gray-500">Simplu și rapid, direct pe WhatsApp.</p>
+                        </div>
+                        <form id="whatsappForm" onsubmit="sendToWhatsapp(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div><label class="block text-sm font-medium text-gray-700 mb-1">Nume</label><input type="text" id="name" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500" placeholder="ex: Maria Ionescu"></div>
+                                <div><label class="block text-sm font-medium text-gray-700 mb-1">Telefon</label><input type="tel" id="phone" required class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500" placeholder="ex: 0723 040 207"></div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Tip Serviciu</label>
+                                    <select id="serviceType" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500">
+                                        <option value="Rezidențial General">Curățenie Generală</option>
+                                        <option value="Întreținere">Curățenie Întreținere</option>
+                                        <option value="După Constructor">După Constructor</option>
+                                        <option value="Canapele/Covoare">Curățare Canapele</option>
+                                        <option value="Birou">Curățenie Birou</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Tip Spațiu</label>
+                                    <select id="spaceSize" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500">
+                                        <option value="Garsonieră">Garsonieră</option>
+                                        <option value="Apartament 2 Camere">Apartament 2 Camere</option>
+                                        <option value="Apartament 3 Camere">Apartament 3 Camere</option>
+                                        <option value="Apartament 4+ Camere">Apartament 4+ Camere</option>
+                                        <option value="Casă/Vilă">Casă / Vilă</option>
+                                        <option value="Spatiu Comercial">Spațiu Comercial</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div><label class="block text-sm font-medium text-gray-700 mb-1">Adresă (Zonă)</label><input type="text" id="address" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500" placeholder="ex: Militari Residence, București"></div>
+                            
+                            <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2"><i class="fa-brands fa-whatsapp text-2xl"></i> Trimite Cererea</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menuModal" class="hidden fixed inset-0 z-[70]" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeMenuModal()"></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    <button onclick="closeMenuModal()" class="absolute top-4 right-4 z-50 bg-gray-100 hover:bg-red-50 hover:text-red-600 text-gray-500 p-2 rounded-full transition"><i class="fa-solid fa-xmark text-lg"></i></button>
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <span class="inline-block p-3 rounded-full bg-blue-50 text-blue-600 text-2xl mb-3"><i id="menuIcon" class="fa-solid fa-broom"></i></span>
+                            <h3 id="menuTitle" class="text-2xl font-display font-bold text-gray-900">Tarife</h3>
+                            <p class="text-gray-500 text-sm">Prețuri estimative. Pot varia în funcție de gradul de murdărie.</p>
+                        </div>
+                        <div id="menuItems" class="space-y-4 mb-8"></div>
+                        <button onclick="closeMenuModal(); toggleBookingModal()" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition shadow-lg">Cere o ofertă personalizată</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+        function toggleBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.toggle('hidden');
+            document.body.style.overflow = modal.classList.contains('hidden') ? 'auto' : 'hidden';
+        }
+
+        function sendToWhatsapp(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('serviceType').value;
+            const size = document.getElementById('spaceSize').value;
+            const address = document.getElementById('address').value;
+            
+            const restaurantPhone = "40723040207"; 
+            
+            const message = `Salut, aș dori o ofertă de curățenie.%0A%0A👤 Nume: *${name}*%0A📞 Telefon: ${phone}%0A🧹 Serviciu: ${service}%0A🏠 Tip Spațiu: ${size}%0A📍 Zona: ${address}%0A%0APuteți să-mi spuneți un preț estimativ?`;
+            
+            window.open(`https://wa.me/${restaurantPhone}?text=${message}`, '_blank');
+        }
+
+        const services = {
+            'rezidential': {
+                title: "Curățenie Rezidențială",
+                icon: "fa-house-chimney",
+                items: [
+                    { name: "Garsonieră", desc: "Aspirare, ștergere praf, baie, bucătărie", price: "de la 350 RON" },
+                    { name: "Apartament 2 Camere", desc: "Curățenie generală completă", price: "de la 450 RON" },
+                    { name: "Apartament 3 Camere", desc: "Curățenie generală completă", price: "de la 550 RON" },
+                    { name: "Casă / Vilă", desc: "Preț per suprafață", price: "Cere Ofertă" }
+                ]
+            },
+            'comercial': {
+                title: "Birouri & Comercial",
+                icon: "fa-building",
+                items: [
+                    { name: "Abonament Lunar", desc: "Intervenții săptămânale/zilnice", price: "Personalizat" },
+                    { name: "Curățenie Generală Birou", desc: "Până la 100mp", price: "de la 600 RON" },
+                    { name: "Curățenie Scări de Bloc", desc: "4 etaje, o dată pe săptămână", price: "Cere Ofertă" }
+                ]
+            },
+            'constructor': {
+                title: "După Constructor",
+                icon: "fa-paint-roller",
+                items: [
+                    { name: "Curățare Intensivă", desc: "Îndepărtare var, vopsea, ciment", price: "de la 10 RON/mp" },
+                    { name: "Geamuri & Tocărie", desc: "Curățare urme adezivi", price: "Inclus" },
+                    { name: "Decapare Pardoseli", desc: "Curățare mecanică", price: "Cere Ofertă" }
+                ]
+            },
+            'tapiterie': {
+                title: "Canapele & Covoare",
+                icon: "fa-couch",
+                items: [
+                    { name: "Fotoliu", desc: "Injecție-extracție", price: "80 RON" },
+                    { name: "Canapea 2 Locuri", desc: "Curățare profundă, uscare rapidă", price: "150 RON" },
+                    { name: "Canapea Colțar", desc: "Curățare completă 5 locuri", price: "250 RON" },
+                    { name: "Saltea Matrimonială", desc: "Igienizare anti-acarieni", price: "150 RON" }
+                ]
+            }
+        };
+
+        function openMenuModal(category) {
+            const data = services[category];
+            const modal = document.getElementById('menuModal');
+            const listContainer = document.getElementById('menuItems');
+            document.getElementById('menuTitle').innerText = data.title;
+            document.getElementById('menuIcon').className = `fa-solid ${data.icon}`;
+            listContainer.innerHTML = data.items.map(item => `
+                <div class="flex justify-between items-start border-b border-gray-100 pb-3 last:border-0">
+                    <div class="text-left"><h4 class="font-bold text-gray-900">${item.name}</h4><p class="text-xs text-gray-500">${item.desc}</p></div>
+                    <span class="font-bold text-blue-600 whitespace-nowrap ml-4 text-sm">${item.price}</span>
+                </div>
+            `).join('');
+            modal.classList.remove('hidden');
+        }
+
+        function closeMenuModal() {
+            document.getElementById('menuModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
