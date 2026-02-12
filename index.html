@@ -123,40 +123,49 @@
         </div>
     </header>
 
-    <section id="servicii" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-6">
+    <section id="servicii" class="py-24 relative overflow-hidden">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1920&auto=format&fit=crop" 
+                 class="w-full h-full object-cover object-center" 
+                 alt="Clean background">
+            <div class="absolute inset-0 bg-white/90"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
             <div class="text-center mb-20">
                 <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">Ce oferim</span>
                 <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mt-2 mb-4">Serviciile Noastre</h2>
                 <p class="text-gray-500">Alege categoria dorită pentru a vedea lista de prețuri estimative.</p>
             </div>
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openMenuModal('rezidential')">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                <div class="group bg-white rounded-2xl p-8 border border-white hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer shadow-sm" onclick="openMenuModal('rezidential')">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
                         <i class="fa-solid fa-house-chimney"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-gray-900">Rezidențial</h3>
                     <p class="text-gray-500 text-sm mb-6">Curățenie generală sau de întreținere pentru apartamente și case.</p>
                     <div class="text-blue-700 font-bold text-sm uppercase group-hover:translate-x-2 transition-transform inline-flex items-center">Vezi Tarife <i class="fa-solid fa-arrow-right ml-2"></i></div>
                 </div>
-                <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openMenuModal('comercial')">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                <div class="group bg-white rounded-2xl p-8 border border-white hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer shadow-sm" onclick="openMenuModal('comercial')">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
                         <i class="fa-solid fa-building"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-gray-900">Birouri / Comercial</h3>
                     <p class="text-gray-500 text-sm mb-6">Spații comerciale, birouri, scări de bloc și abonamente.</p>
                     <div class="text-blue-700 font-bold text-sm uppercase group-hover:translate-x-2 transition-transform inline-flex items-center">Vezi Tarife <i class="fa-solid fa-arrow-right ml-2"></i></div>
                 </div>
-                <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openMenuModal('constructor')">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                <div class="group bg-white rounded-2xl p-8 border border-white hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer shadow-sm" onclick="openMenuModal('constructor')">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
                         <i class="fa-solid fa-paint-roller"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-gray-900">După Constructor</h3>
                     <p class="text-gray-500 text-sm mb-6">Curățare intensivă după renovare sau construcție.</p>
                     <div class="text-blue-700 font-bold text-sm uppercase group-hover:translate-x-2 transition-transform inline-flex items-center">Vezi Tarife <i class="fa-solid fa-arrow-right ml-2"></i></div>
                 </div>
-                <div class="group bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer" onclick="openMenuModal('tapiterie')">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                <div class="group bg-white rounded-2xl p-8 border border-white hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer shadow-sm" onclick="openMenuModal('tapiterie')">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
                         <i class="fa-solid fa-couch"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-gray-900">Canapele & Covoare</h3>
